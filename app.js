@@ -3,6 +3,93 @@
  * Wires search module to UI. Handles rendering, copy-to-clipboard.
  */
 
+// ── Language system ───────────────────────────────────────
+const STRINGS = {
+  en: {
+    tagline:     'The most documented civilization in human history',
+    placeholder: 'Search claims, evidence, rebuttals, sources…',
+    ariaLabel:   'Search the evidence repository',
+    try:         'Try',
+    noResults:   'No evidence found for that query.',
+    footer:      'Wisdom · Strategy · Shield · Spear · Courage · Stones don\'t lie. Coins don\'t lie. DNA doesn\'t lie.',
+    sources:     'SOURCES',
+    evidence:    'EVIDENCE ENTRIES',
+    claims:      'CLAIMS',
+    attacks:     'ATTACKS MAPPED',
+    ourClaim:    'Our Claim',
+    attack:      'Attack + Rebuttal',
+    evidenceLbl: 'Evidence',
+    sourceLbl:   'Source',
+    attackLbl:   'ATTACK',
+    rebuttalLbl: 'REBUTTAL',
+    copy:        'Copy',
+    copied:      'Copied',
+    viewSource:  'View source ↗',
+    results:     (n, q) => `${n} result${n !== 1 ? 's' : ''} · "${q}"`,
+    statsDefault:(s,e,c,r) => `<span>${s}</span> sources · <span>${e}</span> evidence entries · <span>${c}</span> claims · <span>${r}</span> attacks mapped`,
+  },
+  el: {
+    tagline:     'Ο πλέον τεκμηριωμένος πολιτισμός στην ανθρώπινη ιστορία',
+    placeholder: 'Αναζήτηση θέσεων, αποδείξεων, ανασκευών, πηγών…',
+    ariaLabel:   'Αναζήτηση στο αποθετήριο αποδείξεων',
+    try:         'Δοκιμάστε',
+    noResults:   'Δεν βρέθηκαν αποδείξεις για αυτήν την αναζήτηση.',
+    footer:      'Σοφία · Στρατηγική · Ασπίδα · Δόρυ · Θάρρος · Οι πέτρες δεν λένε ψέματα. Τα νομίσματα δεν λένε ψέματα. Το DNA δεν λέει ψέματα.',
+    sources:     'ΠΗΓΕΣ',
+    evidence:    'ΑΠΟΔΕΙΞΕΙΣ',
+    claims:      'ΘΕΣΕΙΣ',
+    attacks:     'ΕΠΙΘΕΣΕΙΣ',
+    ourClaim:    'Η Θέση μας',
+    attack:      'Επίθεση + Ανασκευή',
+    evidenceLbl: 'Απόδειξη',
+    sourceLbl:   'Πηγή',
+    attackLbl:   'ΕΠΙΘΕΣΗ',
+    rebuttalLbl: 'ΑΝΑΣΚΕΥΗ',
+    copy:        'Αντιγραφή',
+    copied:      'Αντιγράφηκε',
+    viewSource:  'Προβολή πηγής ↗',
+    results:     (n, q) => `${n} αποτέλεσμα${n !== 1 ? 'τα' : ''} · "${q}"`,
+    statsDefault:(s,e,c,r) => `<span>${s}</span> πηγές · <span>${e}</span> αποδείξεις · <span>${c}</span> θέσεις · <span>${r}</span> επιθέσεις`,
+  }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  const s = STRINGS[lang];
+
+  // Toggle buttons
+  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+  document.getElementById('lang-el').classList.toggle('active', lang === 'el');
+
+  // UI text
+  document.getElementById('ui-tagline').textContent = s.tagline;
+  document.getElementById('ui-try').textContent = s.try;
+  document.getElementById('ui-footer').textContent = s.footer;
+
+  const input = document.getElementById('search-input');
+  input.placeholder = s.placeholder;
+  input.setAttribute('aria-label', s.ariaLabel);
+
+  const noRes = document.getElementById('no-results');
+  if (noRes) noRes.textContent = s.noResults;
+
+  // Re-render stats and results if any
+  const q = input.value.trim();
+  if (q) {
+    const results = Search.query(q);
+    if (results.length > 0) {
+      renderResults(results, q);
+      updateStatsBar(results.length, q);
+    } else {
+      updateStatsBar(0, q);
+    }
+  } else {
+    updateStatsBar(null);
+  }
+}
+
 (async () => {
 
   // ── Init ────────────────────────────────────────────────
@@ -79,10 +166,10 @@
       btn.addEventListener('click', () => {
         const text = btn.dataset.copy;
         navigator.clipboard.writeText(text).then(() => {
-          btn.textContent = 'Copied';
+          btn.textContent = STRINGS[currentLang].copied;
           btn.classList.add('copied');
           setTimeout(() => {
-            btn.textContent = 'Copy';
+            btn.textContent = STRINGS[currentLang].copy;
             btn.classList.remove('copied');
           }, 1800);
         });
@@ -91,11 +178,19 @@
   }
 
   function renderCard(r, query) {
+    const s = STRINGS[currentLang];
     const typeClass = `type-${r.type}`;
 
-    // Build copy text — what a user would paste in a comment
-    let copyText = '';
+    // Type labels in current language
+    const typeLabel = {
+      claim: s.ourClaim,
+      revisionist: s.attack,
+      evidence: s.evidenceLbl,
+      source: s.sourceLbl
+    }[r.type] || r.typeLabel;
 
+    // Build copy text
+    let copyText = '';
     if (r.type === 'claim') {
       copyText = r.title + (r.body ? '\n\n' + r.body : '');
     } else if (r.type === 'revisionist') {
@@ -108,12 +203,11 @@
 
     // Type-specific inner HTML
     let inner = '';
-
     if (r.type === 'revisionist') {
       inner = `
-        <div class="result-attack-label">Attack</div>
+        <div class="result-attack-label">${s.attackLbl}</div>
         <div class="result-attack">${escHtml(r.raw.claim)}</div>
-        <div class="result-rebuttal-label">Rebuttal</div>
+        <div class="result-rebuttal-label">${s.rebuttalLbl}</div>
         <div class="result-body">${escHtml(r.body)}</div>
       `;
     } else if (r.type === 'evidence') {
@@ -130,35 +224,36 @@
     }
 
     const linkHtml = (r.url)
-      ? `<a class="result-link" href="${escHtml(r.url)}" target="_blank" rel="noopener">View source ↗</a>`
+      ? `<a class="result-link" href="${escHtml(r.url)}" target="_blank" rel="noopener">${s.viewSource}</a>`
       : '';
 
     return `
       <div class="result-card ${typeClass}" data-id="${r.id}">
         <div class="result-card-header">
-          <span class="result-type">${escHtml(r.typeLabel)}</span>
+          <span class="result-type">${escHtml(typeLabel)}</span>
           <span class="result-id">${r.id}</span>
         </div>
         ${inner}
         <div class="result-meta">${escHtml(r.meta)}</div>
         ${linkHtml}
         <br>
-        <button class="copy-btn" data-copy="${escAttr(copyText)}">Copy</button>
+        <button class="copy-btn" data-copy="${escAttr(copyText)}">${s.copy}</button>
       </div>
     `;
   }
 
   // ── Stats bar ─────────────────────────────────────────────
   function updateStatsBar(count, query) {
+    const s = STRINGS[currentLang];
     if (count === null) {
-      statsBar.innerHTML = `
-        <span>${meta.counts.sources}</span> sources ·
-        <span>${meta.counts.evidence}</span> evidence entries ·
-        <span>${meta.counts.claims}</span> claims ·
-        <span>${meta.counts.revisionist_claims}</span> attacks mapped
-      `;
+      statsBar.innerHTML = s.statsDefault(
+        meta.counts.sources,
+        meta.counts.evidence,
+        meta.counts.claims,
+        meta.counts.revisionist_claims
+      );
     } else {
-      statsBar.innerHTML = `<span>${count}</span> result${count !== 1 ? 's' : ''} for "${escHtml(query)}"`;
+      statsBar.innerHTML = `<span>${count}</span> ${s.results(count, escHtml(query))}`;
     }
   }
 
