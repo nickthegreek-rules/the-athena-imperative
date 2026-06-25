@@ -14,16 +14,9 @@
   const header      = document.getElementById('header');
   const input       = document.getElementById('search-input');
   const statsBar    = document.getElementById('stats-bar');
-  const intro       = document.getElementById('intro');
   const introHint   = document.getElementById('intro-hint');
   const resultsEl   = document.getElementById('results');
   const noResults   = document.getElementById('no-results');
-
-  // Populate counts
-  document.getElementById('count-sources').textContent    = meta.counts.sources;
-  document.getElementById('count-evidence').textContent   = meta.counts.evidence;
-  document.getElementById('count-claims').textContent     = meta.counts.claims;
-  document.getElementById('count-revisionist').textContent = meta.counts.revisionist_claims;
 
   updateStatsBar(null);
 
@@ -65,7 +58,6 @@
 
   function showIntro() {
     header.classList.remove('compact');
-    intro.style.display = 'grid';
     introHint.style.display = 'block';
     noResults.style.display = 'none';
     resultsEl.innerHTML = '';
