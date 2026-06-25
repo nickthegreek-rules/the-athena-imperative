@@ -253,7 +253,7 @@ function setLang(lang) {
         meta.counts.revisionist_claims
       );
     } else {
-      statsBar.innerHTML = `<span>${count}</span> ${s.results(count, escHtml(query))}`;
+      statsBar.innerHTML = s.results(count, escHtml(query));
     }
   }
 
