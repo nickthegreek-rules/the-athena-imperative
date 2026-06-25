@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Athena Imperative</title>
+  <meta name="description" content="The most documented civilization in human history. Evidence-based repository for Greek historical continuity.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="wordmark">The <span>Athena</span> Imperative</div>
+    <div class="tagline">The most documented civilization in human history</div>
+
+    <div id="search-wrap">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search claims, evidence, rebuttals, sources…"
+        autocomplete="off"
+        spellcheck="false"
+        aria-label="Search the evidence repository"
+      >
+      <svg class="search-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="7.5" cy="7.5" r="5.5"/>
+        <line x1="11.5" y1="11.5" x2="16" y2="16"/>
+      </svg>
+    </div>
+
+    <div id="stats-bar" aria-live="polite"></div>
+  </header>
+
+  <!-- Main -->
+  <main id="main" role="main">
+
+    <!-- Intro / empty state -->
+    <div id="intro" aria-label="Repository statistics">
+      <div class="intro-card">
+        <div class="intro-card-label">Sources</div>
+        <div class="intro-card-number" id="count-sources">—</div>
+        <div class="intro-card-desc">Primary sources, peer-reviewed studies, legal documents</div>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-label">Evidence Entries</div>
+        <div class="intro-card-number" id="count-evidence">—</div>
+        <div class="intro-card-desc">DNA, linguistic, epigraphic, archaeological, documentary</div>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-label">Claims</div>
+        <div class="intro-card-number" id="count-claims">—</div>
+        <div class="intro-card-desc">Verified positive assertions with supporting evidence</div>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-label">Attacks Mapped</div>
+        <div class="intro-card-number" id="count-revisionist">—</div>
+        <div class="intro-card-desc">Revisionist claims with sourced rebuttals</div>
+      </div>
+    </div>
+
+    <p class="intro-hint" id="intro-hint">
+      Try <strong>Alexander</strong>, <strong>DNA</strong>, <strong>Pella</strong>, <strong>Byzantine</strong>, <strong>Prespa</strong>
+    </p>
+
+    <!-- Results -->
+    <div id="results" role="region" aria-label="Search results" aria-live="polite"></div>
+
+    <!-- No results -->
+    <div id="no-results" style="display:none" role="alert">
+      No evidence found for that query.
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <span>Athena</span> · Wisdom · Strategy · Shield · Spear · Courage ·
+    Stones don't lie. Coins don't lie. DNA doesn't lie.
+  </footer>
+
+</div>
+
+<script src="search.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
