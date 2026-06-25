@@ -57,7 +57,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 #header.compact {
@@ -204,7 +204,7 @@ body {
 }
 
 .intro-hint {
-  margin-top: 2rem;
+  margin-top: 0.75rem;
   font-size: 0.8125rem;
   color: var(--ink-light);
   text-align: center;
