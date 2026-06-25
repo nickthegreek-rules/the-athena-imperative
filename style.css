@@ -50,19 +50,13 @@ body {
 
 /* ── Header / Hero ───────────────────────────────────────── */
 #header {
-  padding: 4rem 1.5rem 3rem;
+  padding: 8vh 1.5rem 2rem;
   text-align: center;
   transition: padding var(--transition);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
 }
 
 #header.compact {
-  padding: 1.5rem 1.5rem 1.25rem;
-  min-height: auto;
+  padding: 2.5rem 1.5rem 1.25rem;
 }
 
 .wordmark {
