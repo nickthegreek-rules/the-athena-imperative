@@ -1,278 +1,464 @@
-/**
- * Athena Imperative — App
- * Wires search module to UI. Handles rendering, copy-to-clipboard.
- */
+/* ============================================================
+   THE ATHENA IMPERATIVE — Stylesheet
+   Design: Scholarly precision. Marble weight. No noise.
+   ============================================================ */
 
-// ── Language system ───────────────────────────────────────
-const STRINGS = {
-  en: {
-    tagline:     'The most documented civilization in human history',
-    placeholder: 'Search claims, evidence, rebuttals, sources…',
-    ariaLabel:   'Search the evidence repository',
-    try:         'Try',
-    noResults:   'No evidence found for that query.',
-    footer:      'Wisdom · Strategy · Shield · Spear · Courage · Stones don\'t lie. Coins don\'t lie. DNA doesn\'t lie.',
-    sources:     'SOURCES',
-    evidence:    'EVIDENCE ENTRIES',
-    claims:      'CLAIMS',
-    attacks:     'ATTACKS MAPPED',
-    ourClaim:    'Our Claim',
-    attack:      'Attack + Rebuttal',
-    evidenceLbl: 'Evidence',
-    sourceLbl:   'Source',
-    attackLbl:   'ATTACK',
-    rebuttalLbl: 'REBUTTAL',
-    copy:        'Copy',
-    copied:      'Copied',
-    viewSource:  'View source ↗',
-    results:     (n, q) => `${n} result${n !== 1 ? 's' : ''} · "${q}"`,
-    statsDefault:(s,e,c,r) => `<span>${s}</span> sources · <span>${e}</span> evidence entries · <span>${c}</span> claims · <span>${r}</span> attacks mapped`,
-  },
-  el: {
-    tagline:     'Ο πλέον τεκμηριωμένος πολιτισμός στην ανθρώπινη ιστορία',
-    placeholder: 'Αναζήτηση θέσεων, αποδείξεων, ανασκευών, πηγών…',
-    ariaLabel:   'Αναζήτηση στο αποθετήριο αποδείξεων',
-    try:         'Δοκιμάστε',
-    noResults:   'Δεν βρέθηκαν αποδείξεις για αυτήν την αναζήτηση.',
-    footer:      'Σοφία · Στρατηγική · Ασπίδα · Δόρυ · Θάρρος · Οι πέτρες δεν λένε ψέματα. Τα νομίσματα δεν λένε ψέματα. Το DNA δεν λέει ψέματα.',
-    sources:     'ΠΗΓΕΣ',
-    evidence:    'ΑΠΟΔΕΙΞΕΙΣ',
-    claims:      'ΘΕΣΕΙΣ',
-    attacks:     'ΕΠΙΘΕΣΕΙΣ',
-    ourClaim:    'Η Θέση μας',
-    attack:      'Επίθεση + Ανασκευή',
-    evidenceLbl: 'Απόδειξη',
-    sourceLbl:   'Πηγή',
-    attackLbl:   'ΕΠΙΘΕΣΗ',
-    rebuttalLbl: 'ΑΝΑΣΚΕΥΗ',
-    copy:        'Αντιγραφή',
-    copied:      'Αντιγράφηκε',
-    viewSource:  'Προβολή πηγής ↗',
-    results:     (n, q) => `${n} αποτέλεσμα${n !== 1 ? 'τα' : ''} · "${q}"`,
-    statsDefault:(s,e,c,r) => `<span>${s}</span> πηγές · <span>${e}</span> αποδείξεις · <span>${c}</span> θέσεις · <span>${r}</span> επιθέσεις`,
-  }
-};
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-let currentLang = 'en';
+/* ── Tokens ─────────────────────────────────────────────── */
+:root {
+  --bg:          #F8F7F4;
+  --surface:     #EFEDE8;
+  --surface-2:   #E8E5DF;
+  --ink:         #1A1A18;
+  --ink-mid:     #4A4A45;
+  --ink-light:   #8A8A82;
+  --red:         #8B1E1E;
+  --red-dim:     #C45050;
+  --gold:        #C4A862;
+  --gold-dim:    #D4BC88;
 
-function setLang(lang) {
-  currentLang = lang;
-  const s = STRINGS[lang];
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
 
-  // Toggle buttons
-  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-  document.getElementById('lang-el').classList.toggle('active', lang === 'el');
-
-  // UI text
-  document.getElementById('ui-tagline').textContent = s.tagline;
-  document.getElementById('ui-try').textContent = s.try;
-  document.getElementById('ui-footer').textContent = s.footer;
-
-  const input = document.getElementById('search-input');
-  input.placeholder = s.placeholder;
-  input.setAttribute('aria-label', s.ariaLabel);
-
-  const noRes = document.getElementById('no-results');
-  if (noRes) noRes.textContent = s.noResults;
-
-  // Re-render stats and results if any
-  const q = input.value.trim();
-  if (q) {
-    const results = Search.query(q);
-    if (results.length > 0) {
-      renderResults(results, q);
-      updateStatsBar(results.length, q);
-    } else {
-      updateStatsBar(0, q);
-    }
-  } else {
-    updateStatsBar(null);
-  }
+  --radius:      2px;
+  --transition:  200ms ease;
 }
 
-(async () => {
+/* ── Language toggle ─────────────────────────────────────── */
+#lang-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  z-index: 100;
+}
 
-  // ── Init ────────────────────────────────────────────────
-  let meta;
-  try {
-    meta = await Search.init('database.json');
-  } catch (e) {
-    console.error('Failed to load database:', e);
-    document.getElementById('stats-bar').textContent = 'Database unavailable.';
-    return;
-  }
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  cursor: pointer;
+  padding: 0.25rem 0.125rem;
+  transition: color var(--transition);
+}
 
-  // ── Elements ─────────────────────────────────────────────
-  const header      = document.getElementById('header');
-  const input       = document.getElementById('search-input');
-  const statsBar    = document.getElementById('stats-bar');
-  const introHint   = document.getElementById('intro-hint');
-  const resultsEl   = document.getElementById('results');
-  const noResults   = document.getElementById('no-results');
+.lang-btn.active {
+  color: var(--red);
+}
 
-  updateStatsBar(null);
+.lang-btn:hover {
+  color: var(--ink-mid);
+}
 
-  // ── Search handler ────────────────────────────────────────
-  let debounceTimer;
+.lang-sep {
+  font-size: 0.5rem;
+  color: var(--ink-light);
+}
 
-  input.addEventListener('input', () => {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => runSearch(input.value.trim()), 220);
-  });
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  input.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      input.value = '';
-      showIntro();
-    }
-  });
+html { font-size: 16px; overflow-y: scroll; }
 
-  function runSearch(q) {
-    if (!q) { showIntro(); return; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
 
-    introHint.style.display = 'none';
-    noResults.style.display = 'none';
+/* ── Layout ──────────────────────────────────────────────── */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    const results = Search.query(q);
+/* ── Header / Hero ───────────────────────────────────────── */
+#header {
+  padding: 6vh 1.5rem 2rem;
+  text-align: center;
+  transition: padding 150ms ease;
+}
 
-    if (results.length === 0) {
-      resultsEl.innerHTML = '';
-      noResults.style.display = 'block';
-      updateStatsBar(0, q);
-      return;
-    }
+#header.compact {
+  padding: 4vh 1.5rem 1.25rem;
+}
 
-    updateStatsBar(results.length, q);
-    renderResults(results, q);
-  }
+.wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1.1;
+}
 
-  function showIntro() {
-    introHint.style.display = 'block';
-    noResults.style.display = 'none';
-    resultsEl.innerHTML = '';
-    updateStatsBar(null);
-  }
+.wordmark span {
+  color: var(--red);
+}
 
-  // ── Render ────────────────────────────────────────────────
-  function renderResults(results, query) {
-    const html = results.map(r => renderCard(r, query)).join('');
-    resultsEl.innerHTML = `
-      <div id="results-meta">${results.length} result${results.length !== 1 ? 's' : ''} · "${escHtml(query)}"</div>
-      ${html}
-    `;
+.tagline {
+  margin-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
 
-    // Bind copy buttons
-    resultsEl.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const text = btn.dataset.copy;
-        navigator.clipboard.writeText(text).then(() => {
-          btn.textContent = STRINGS[currentLang].copied;
-          btn.classList.add('copied');
-          setTimeout(() => {
-            btn.textContent = STRINGS[currentLang].copy;
-            btn.classList.remove('copied');
-          }, 1800);
-        });
-      });
-    });
-  }
+/* ── Search Bar ──────────────────────────────────────────── */
+#search-wrap {
+  width: 100%;
+  max-width: 640px;
+  margin: 2rem auto 0;
+  position: relative;
+}
 
-  function renderCard(r, query) {
-    const s = STRINGS[currentLang];
-    const typeClass = `type-${r.type}`;
+#header.compact #search-wrap {
+  margin-top: 0.75rem;
+}
 
-    // Type labels in current language
-    const typeLabel = {
-      claim: s.ourClaim,
-      revisionist: s.attack,
-      evidence: s.evidenceLbl,
-      source: s.sourceLbl
-    }[r.type] || r.typeLabel;
+#search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--ink-mid);
+  border-radius: 0;
+  padding: 0.75rem 2.5rem 0.75rem 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--ink);
+  outline: none;
+  transition: border-color var(--transition);
+  caret-color: var(--red);
+}
 
-    // Build copy text
-    let copyText = '';
-    if (r.type === 'claim') {
-      copyText = r.title + (r.body ? '\n\n' + r.body : '');
-    } else if (r.type === 'revisionist') {
-      copyText = 'Claim: ' + r.raw.claim + '\n\nRebuttal: ' + r.body;
-    } else if (r.type === 'evidence') {
-      copyText = r.raw.summary + (r.raw.quote ? '\n\n"' + r.raw.quote + '"' : '') + (r.raw.source ? '\n\nSource: ' + r.raw.source : '');
-    } else {
-      copyText = r.title + (r.body ? '\n\n' + r.body : '') + (r.meta ? '\n\n' + r.meta : '');
-    }
+#search-input::placeholder {
+  color: var(--ink-light);
+  font-weight: 300;
+}
 
-    // Type-specific inner HTML
-    let inner = '';
-    if (r.type === 'revisionist') {
-      inner = `
-        <div class="result-attack-label">${s.attackLbl}</div>
-        <div class="result-attack">${escHtml(r.raw.claim)}</div>
-        <div class="result-rebuttal-label">${s.rebuttalLbl}</div>
-        <div class="result-body">${escHtml(r.body)}</div>
-      `;
-    } else if (r.type === 'evidence') {
-      inner = `
-        <div class="result-title">${escHtml(r.title)}</div>
-        ${r.raw.quote ? `<div class="result-quote">${escHtml(r.raw.quote)}</div>` : ''}
-        ${r.body && r.body !== r.raw.quote ? `<div class="result-body">${escHtml(r.body)}</div>` : ''}
-      `;
-    } else {
-      inner = `
-        <div class="result-title">${escHtml(r.title)}</div>
-        ${r.body ? `<div class="result-body">${escHtml(r.body)}</div>` : ''}
-      `;
-    }
+#search-input:focus {
+  border-bottom-color: var(--red);
+}
 
-    const linkHtml = (r.url)
-      ? `<a class="result-link" href="${escHtml(r.url)}" target="_blank" rel="noopener">${s.viewSource}</a>`
-      : '';
+.search-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink-light);
+  pointer-events: none;
+  width: 18px;
+  height: 18px;
+}
 
-    return `
-      <div class="result-card ${typeClass}" data-id="${r.id}">
-        <div class="result-card-header">
-          <span class="result-type">${escHtml(typeLabel)}</span>
-          <span class="result-id">${r.id}</span>
-        </div>
-        ${inner}
-        <div class="result-meta">${escHtml(r.meta)}</div>
-        ${linkHtml}
-        <br>
-        <button class="copy-btn" data-copy="${escAttr(copyText)}">${s.copy}</button>
-      </div>
-    `;
-  }
+#search-input:focus + .search-icon {
+  color: var(--red);
+}
 
-  // ── Stats bar ─────────────────────────────────────────────
-  function updateStatsBar(count, query) {
-    const s = STRINGS[currentLang];
-    if (count === null) {
-      statsBar.innerHTML = s.statsDefault(
-        meta.counts.sources,
-        meta.counts.evidence,
-        meta.counts.claims,
-        meta.counts.revisionist_claims
-      );
-    } else {
-      statsBar.innerHTML = `<span>${count}</span> ${s.results(count, escHtml(query))}`;
-    }
-  }
+/* ── Stats bar ───────────────────────────────────────────── */
+#stats-bar {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-light);
+  text-transform: uppercase;
+}
 
-  // ── Helpers ───────────────────────────────────────────────
-  function escHtml(str) {
-    if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
+#stats-bar span {
+  color: var(--gold);
+}
 
-  function escAttr(str) {
-    if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-  }
+/* ── Main content ────────────────────────────────────────── */
+#main {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
 
-})();
+/* ── Empty / Intro state ─────────────────────────────────── */
+#intro {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--surface-2);
+  border: 1px solid var(--surface-2);
+}
+
+.intro-card {
+  background: var(--bg);
+  padding: 1.5rem;
+}
+
+.intro-card-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.intro-card-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.intro-card-desc {
+  margin-top: 0.375rem;
+  font-size: 0.8125rem;
+  color: var(--ink-mid);
+  line-height: 1.5;
+}
+
+.intro-hint {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--ink-light);
+  text-align: center;
+}
+
+.intro-hint strong {
+  color: var(--ink-mid);
+  font-weight: 500;
+}
+
+/* ── Results ─────────────────────────────────────────────── */
+#results {
+  margin-top: 2rem;
+}
+
+#results-meta {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--surface-2);
+}
+
+/* ── Result Card ─────────────────────────────────────────── */
+.result-card {
+  background: var(--surface);
+  border-left: 2px solid transparent;
+  padding: 1.25rem 1.375rem;
+  margin-bottom: 1px;
+  transition: border-color var(--transition), background var(--transition);
+  cursor: default;
+}
+
+.result-card:hover {
+  background: var(--surface-2);
+  border-left-color: var(--red);
+}
+
+.result-card.type-claim {
+  border-left-color: var(--red);
+}
+
+.result-card.type-revisionist {
+  border-left-color: var(--gold);
+}
+
+.result-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.625rem;
+}
+
+.result-type {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.type-claim    .result-type { background: var(--red);  color: #fff; }
+.type-revisionist .result-type { background: var(--gold); color: var(--ink); }
+.type-evidence .result-type { background: var(--surface-2); color: var(--ink-mid); }
+.type-source   .result-type { background: var(--surface-2); color: var(--ink-mid); }
+
+.result-id {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+}
+
+.result-title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+/* Attack label for revisionist claims */
+.result-attack-label {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.result-attack {
+  font-size: 0.8125rem;
+  color: var(--ink-mid);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--gold-dim);
+}
+
+.result-rebuttal-label {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red-dim);
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.result-body {
+  font-size: 0.875rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+  margin-bottom: 0.625rem;
+}
+
+.result-quote {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: var(--ink);
+  padding-left: 0.875rem;
+  border-left: 2px solid var(--red);
+  margin: 0.5rem 0 0.625rem;
+  line-height: 1.5;
+}
+
+.result-meta {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+.result-link {
+  display: inline-block;
+  margin-top: 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red-dim);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.result-link:hover {
+  border-bottom-color: var(--red-dim);
+}
+
+/* ── Copy button ─────────────────────────────────────────── */
+.copy-btn {
+  display: inline-block;
+  margin-top: 0.625rem;
+  padding: 0.3rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.copy-btn:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.copy-btn.copied {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── No results ──────────────────────────────────────────── */
+#no-results {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--ink-light);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-style: italic;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+#footer {
+  border-top: 1px solid var(--surface-2);
+  padding: 1.5rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+
+#footer span {
+  color: var(--red);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  #header { padding: 2.5rem 1.25rem 2rem; }
+  #header.compact { padding: 1.25rem; }
+  #main { padding: 0 1.25rem 3rem; }
+  .result-card { padding: 1rem 1.125rem; }
+  .intro-card-number { font-size: 2rem; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
