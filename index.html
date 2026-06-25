@@ -10,10 +10,17 @@
 <body>
 <div id="app">
 
+  <!-- Language toggle -->
+  <div id="lang-toggle">
+    <button id="lang-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">·</span>
+    <button id="lang-el" class="lang-btn" onclick="setLang('el')">ΕΛ</button>
+  </div>
+
   <!-- Header -->
   <header id="header">
     <div class="wordmark">The <span>Athena</span> Imperative</div>
-    <div class="tagline">The most documented civilization in human history</div>
+    <div class="tagline" id="ui-tagline">The most documented civilization in human history</div>
 
     <div id="search-wrap">
       <input
@@ -40,7 +47,7 @@
 
     <div id="stats-bar" aria-live="polite"></div>
     <p class="intro-hint" id="intro-hint">
-      Try <strong>Alexander</strong>, <strong>DNA</strong>, <strong>Pella</strong>, <strong>Byzantine</strong>, <strong>Prespa</strong>
+      <span id="ui-try">Try</span> <strong>Alexander</strong>, <strong>DNA</strong>, <strong>Pella</strong>, <strong>Byzantine</strong>, <strong>Prespa</strong>
     </p>
   </header>
 
@@ -51,7 +58,7 @@
     <div id="results" role="region" aria-label="Search results" aria-live="polite"></div>
 
     <!-- No results -->
-    <div id="no-results" style="display:none" role="alert">
+    <div id="no-results" style="display:none" role="alert" id="ui-noresults">
       No evidence found for that query.
     </div>
 
@@ -59,8 +66,7 @@
 
   <!-- Footer -->
   <footer id="footer">
-    <span>Athena</span> · Wisdom · Strategy · Shield · Spear · Courage ·
-    Stones don't lie. Coins don't lie. DNA doesn't lie.
+    <span>Athena</span> · <span id="ui-footer">Wisdom · Strategy · Shield · Spear · Courage · Stones don't lie. Coins don't lie. DNA doesn't lie.</span>
   </footer>
 
 </div>
