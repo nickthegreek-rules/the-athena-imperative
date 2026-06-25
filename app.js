@@ -1,3 +1,8 @@
+/**
+ * Athena Imperative — App
+ * Wires search module to UI. Handles rendering, copy-to-clipboard.
+ */
+
 (async () => {
 
   // ── Init ────────────────────────────────────────────────
@@ -39,7 +44,6 @@
     if (!q) { showIntro(); return; }
 
     header.classList.add('compact');
-    intro.style.display = 'none';
     introHint.style.display = 'none';
     noResults.style.display = 'none';
 
