@@ -24,9 +24,17 @@
         spellcheck="false"
         aria-label="Search the evidence repository"
       >
-      <svg class="search-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-        <circle cx="7.5" cy="7.5" r="5.5"/>
-        <line x1="11.5" y1="11.5" x2="16" y2="16"/>
+      <svg class="search-icon" viewBox="-16 -22 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <ellipse cx="0" cy="2" rx="13" ry="14"/>
+        <path d="M-7,-10 L-10,-18 L-4,-12" fill="currentColor" stroke="none"/>
+        <path d="M7,-10 L10,-18 L4,-12" fill="currentColor" stroke="none"/>
+        <circle cx="-4.5" cy="0" r="3.5"/>
+        <circle cx="-4.5" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        <circle cx="4.5" cy="0" r="3.5"/>
+        <circle cx="4.5" cy="0" r="1.2" fill="currentColor" stroke="none"/>
+        <path d="M-2,5 L0,9 L2,5" fill="currentColor" stroke="none"/>
+        <path d="M-13,2 Q-18,8 -13,14" stroke-width="1.2"/>
+        <path d="M13,2 Q18,8 13,14" stroke-width="1.2"/>
       </svg>
     </div>
 
@@ -35,30 +43,6 @@
 
   <!-- Main -->
   <main id="main" role="main">
-
-    <!-- Intro / empty state -->
-    <div id="intro" aria-label="Repository statistics">
-      <div class="intro-card">
-        <div class="intro-card-label">Sources</div>
-        <div class="intro-card-number" id="count-sources">—</div>
-        <div class="intro-card-desc">Primary sources, peer-reviewed studies, legal documents</div>
-      </div>
-      <div class="intro-card">
-        <div class="intro-card-label">Evidence Entries</div>
-        <div class="intro-card-number" id="count-evidence">—</div>
-        <div class="intro-card-desc">DNA, linguistic, epigraphic, archaeological, documentary</div>
-      </div>
-      <div class="intro-card">
-        <div class="intro-card-label">Claims</div>
-        <div class="intro-card-number" id="count-claims">—</div>
-        <div class="intro-card-desc">Verified positive assertions with supporting evidence</div>
-      </div>
-      <div class="intro-card">
-        <div class="intro-card-label">Attacks Mapped</div>
-        <div class="intro-card-number" id="count-revisionist">—</div>
-        <div class="intro-card-desc">Revisionist claims with sourced rebuttals</div>
-      </div>
-    </div>
 
     <p class="intro-hint" id="intro-hint">
       Try <strong>Alexander</strong>, <strong>DNA</strong>, <strong>Pella</strong>, <strong>Byzantine</strong>, <strong>Prespa</strong>
