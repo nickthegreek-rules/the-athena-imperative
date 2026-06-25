@@ -4,17 +4,17 @@
     "description": "The Athena Imperative — Evidence Repository",
     "tagline": "The most documented civilization in human history.",
     "counts": {
-      "sources": 37,
-      "evidence": 30,
+      "sources": 38,
+      "evidence": 31,
       "claims": 20,
-      "revisionist_claims": 21,
-      "images": 23
+      "revisionist_claims": 22,
+      "images": 24
     }
   },
   "sources": [
     {
       "id": "S01",
-      "title": "",
+      "title": "Vergina: The Royal Tombs",
       "authors": "Andronikos, M.",
       "year": "1984",
       "publisher": "Ekdotike Athenon",
@@ -26,7 +26,7 @@
     },
     {
       "id": "S02",
-      "title": "",
+      "title": "Linear B Tablet (Messenia)",
       "authors": "Unknown",
       "year": "-1450",
       "publisher": "Ancient Inscription",
@@ -38,7 +38,7 @@
     },
     {
       "id": "S03",
-      "title": "",
+      "title": "Histories, Book 5",
       "authors": "Herodotus",
       "year": "-440",
       "publisher": "Primary Ancient text",
@@ -50,7 +50,7 @@
     },
     {
       "id": "S04",
-      "title": "",
+      "title": "Panegyricus",
       "authors": "Isocrates",
       "year": "-380",
       "publisher": "",
@@ -62,7 +62,7 @@
     },
     {
       "id": "S05",
-      "title": "",
+      "title": "Convention Concerning the Exchange of Greek and Turkish Populations",
       "authors": "International Treaty",
       "year": "1923",
       "publisher": "Treaty of Lausanne",
@@ -74,7 +74,7 @@
     },
     {
       "id": "S06",
-      "title": "",
+      "title": "Evidence for Greek Dialect in the Mycenaean Archives",
       "authors": "Ventris, M., Chadwick, J.",
       "year": "1953",
       "publisher": "Journal of Hellenic Studies",
@@ -86,7 +86,7 @@
     },
     {
       "id": "S07",
-      "title": "",
+      "title": "The Greek Millet in the Ottoman Empire",
       "authors": "Clogg, R.",
       "year": "1982",
       "publisher": "Christians and Jews in the Ottoman Empire (Braude, B. & Lewis, B., eds.), Holmes & Meier",
@@ -98,7 +98,7 @@
     },
     {
       "id": "S08",
-      "title": "",
+      "title": "Pella Curse Tablet — linguistic analysis",
       "authors": "Méndez Dosuna, J., Crespo, E.",
       "year": "1993",
       "publisher": "Hellenic Dialectology Journal",
@@ -110,7 +110,7 @@
     },
     {
       "id": "S09",
-      "title": "",
+      "title": "Hellenism in Byzantium: The Transformations of Greek Identity and the Reception of the Classical Tradition",
       "authors": "Kaldellis, A",
       "year": "2007",
       "publisher": "Cambridge University Press",
@@ -122,7 +122,7 @@
     },
     {
       "id": "S10",
-      "title": "",
+      "title": "A Companion to Ancient Macedonia",
       "authors": "Roisman, J., Worthington, I. (eds.)",
       "year": "2010",
       "publisher": "Wiley-Blackwell",
@@ -134,7 +134,7 @@
     },
     {
       "id": "S11",
-      "title": "",
+      "title": "Greek: A History of the Language and its Speakers",
       "authors": "Horrocks, G.",
       "year": "2014",
       "publisher": "Wiley-Blackwell",
@@ -146,7 +146,7 @@
     },
     {
       "id": "S12",
-      "title": "",
+      "title": "Genetic origins of the Minoans and Mycenaeans",
       "authors": "Lazaridis, I. et al.",
       "year": "2017",
       "publisher": "Nature",
@@ -158,7 +158,7 @@
     },
     {
       "id": "S13",
-      "title": "",
+      "title": "The genomic history of the Aegean palatial civilizations",
       "authors": "Clemente, F. et al.",
       "year": "2021",
       "publisher": "Cell",
@@ -170,7 +170,7 @@
     },
     {
       "id": "S14",
-      "title": "",
+      "title": "A genetic probe into the ancient and medieval history of Southern Europe and West Asia",
       "authors": "Lazaridis, I. et al.",
       "year": "2022",
       "publisher": "Science",
@@ -182,7 +182,7 @@
     },
     {
       "id": "S15",
-      "title": "",
+      "title": "Ancient DNA reveals admixture history and endogamy in the prehistoric Aegean",
       "authors": "Skourtanioti, E. et al.",
       "year": "2023",
       "publisher": "Nature: Ecology & Evolution",
@@ -194,7 +194,7 @@
     },
     {
       "id": "S16",
-      "title": "",
+      "title": "Uniparental analysis of Deep Maniot Greeks",
       "authors": "Davranoglou, L.R. et al.",
       "year": "2026",
       "publisher": "Communications Biology",
@@ -206,7 +206,7 @@
     },
     {
       "id": "S17",
-      "title": "",
+      "title": "The Aegean from Bronze Age to Iron Age: Continuity and Change Between the Twelfth and Eighth Centuries BC",
       "authors": "Dickinson, O.",
       "year": "2006",
       "publisher": "Routledge",
@@ -218,7 +218,7 @@
     },
     {
       "id": "S18",
-      "title": "",
+      "title": "Anatolia — Greek colonies on the Anatolian coasts, c.1180–547 BCE",
       "authors": "Britannica editorial",
       "year": "2026",
       "publisher": "Encyclopaedia Britannica",
@@ -230,7 +230,7 @@
     },
     {
       "id": "S19",
-      "title": "",
+      "title": "Ionian Confederacy",
       "authors": "EBSCO Research Starters editorial",
       "year": "2026",
       "publisher": "EBSCO Research Starters",
@@ -242,7 +242,7 @@
     },
     {
       "id": "S20",
-      "title": "",
+      "title": "The Greeks Overseas: Their Early Colonies and Trade",
       "authors": "Boardman, J.",
       "year": "1999",
       "publisher": "Thames & Hudson",
@@ -254,7 +254,7 @@
     },
     {
       "id": "S21",
-      "title": "",
+      "title": "Miletus",
       "authors": "Turkish Archaeological News)",
       "year": "2023",
       "publisher": "Turkish Archaeological News)",
@@ -266,7 +266,7 @@
     },
     {
       "id": "S22",
-      "title": "",
+      "title": "Agia Sophia: Bridge Across Time",
       "authors": "Association for Asian Studies",
       "year": "2022",
       "publisher": "Association for Asian Studies",
@@ -278,7 +278,7 @@
     },
     {
       "id": "S23",
-      "title": "",
+      "title": "Life of Flamininus",
       "authors": "Plutarch",
       "year": "100",
       "publisher": "Primary Ancient text",
@@ -290,7 +290,7 @@
     },
     {
       "id": "S24",
-      "title": "",
+      "title": "Histories Book XVIII",
       "authors": "Polybius",
       "year": "-150",
       "publisher": "Primary Ancient text",
@@ -302,7 +302,7 @@
     },
     {
       "id": "S25",
-      "title": "",
+      "title": "Geography (Geographika)",
       "authors": "Strabo",
       "year": "-20",
       "publisher": "Primary Ancient text",
@@ -314,7 +314,7 @@
     },
     {
       "id": "S26",
-      "title": "",
+      "title": "Epistles Book II",
       "authors": "Horace",
       "year": "-19",
       "publisher": "Primary Ancient text",
@@ -326,7 +326,7 @@
     },
     {
       "id": "S27",
-      "title": "",
+      "title": "Letter to the Chians (stele inscription)",
       "authors": "Alexander III of Macedon",
       "year": "-332",
       "publisher": "Ancient Inscription",
@@ -338,7 +338,7 @@
     },
     {
       "id": "S28",
-      "title": "",
+      "title": "Treaty of Prespa",
       "authors": "Republic of North Macedonia and Hellenic Republic",
       "year": "2018",
       "publisher": "United Nations Treaty Collection",
@@ -350,7 +350,7 @@
     },
     {
       "id": "S29",
-      "title": "",
+      "title": "New Testament (Koine Greek)",
       "authors": "Various",
       "year": "80",
       "publisher": "Primary Ancient text",
@@ -362,7 +362,7 @@
     },
     {
       "id": "S30",
-      "title": "",
+      "title": "Roman Antiquities (Ῥωμαϊκὴ Ἀρχαιολογία)",
       "authors": "Dionysius of Halicarnassus",
       "year": "-7",
       "publisher": "Primary Ancient text",
@@ -374,7 +374,7 @@
     },
     {
       "id": "S31",
-      "title": "",
+      "title": "Roman History",
       "authors": "Appian of Alexandria",
       "year": "150",
       "publisher": "Primary Ancient text",
@@ -386,7 +386,7 @@
     },
     {
       "id": "S32",
-      "title": "",
+      "title": "Anabasis of Alexander (Ἀνάβασις Ἀλεξάνδρου)",
       "authors": "Arrian of Nicomedia",
       "year": "130",
       "publisher": "Primary Ancient text",
@@ -398,7 +398,7 @@
     },
     {
       "id": "S33",
-      "title": "",
+      "title": "Life of Alexander (Βίος Ἀλεξάνδρου)",
       "authors": "Plutarch",
       "year": "100",
       "publisher": "Primary Ancient text",
@@ -410,7 +410,7 @@
     },
     {
       "id": "S34",
-      "title": "",
+      "title": "Chronographia (Χρονογραφία)",
       "authors": "Psellos, Michael",
       "year": "1063",
       "publisher": "Primary Ancient text",
@@ -422,7 +422,7 @@
     },
     {
       "id": "S35",
-      "title": "",
+      "title": "Alexiad (Ἀλεξιάς)",
       "authors": "Komnene, Anna",
       "year": "1148",
       "publisher": "Primary Ancient text",
@@ -434,7 +434,7 @@
     },
     {
       "id": "S36",
-      "title": "",
+      "title": "On the Laws (Νόμων Συγγραφή) / Various works",
       "authors": "Plethon, George Gemistos",
       "year": "1140",
       "publisher": "Primary Ancient text",
@@ -446,7 +446,7 @@
     },
     {
       "id": "S37",
-      "title": "",
+      "title": "Condemnation of Plethon's Works",
       "authors": "Scholarios, Gennadios (first Patriarch of Constantinople under Ottoman rule)",
       "year": "1460",
       "publisher": "Primary Ancient text",
@@ -455,6 +455,18 @@
       "url": "",
       "notes": "First Ecumenical Patriarch after Ottoman conquest ordered burning of Plethon's books for promoting Hellenic paganism. Paradoxically proves Hellenic identity was a living, threatening intellectual reality in 15th century Byzantium — you do not burn books promoting an identity nobody holds.",
       "evidence_summary": ""
+    },
+    {
+      "id": "S38",
+      "title": "Interview/Statement — Prof. Dragi Gjorgiev",
+      "authors": "Gjorgiev, Dragi",
+      "year": "2026",
+      "publisher": "Interview",
+      "type": "News",
+      "credibility": "High",
+      "url": "",
+      "notes": "Director, National Institute of History of North Macedonia. Stated on record that Alexander belonged to the Hellenic world and North Macedonians have no connection as they are Slavs. Quote widely circulated, authenticity undisputed. Original interview source pending identification.",
+      "evidence_summary": "\"Prof. Dragi Gjorgiev, Director of the National Institute of History of North Macedonia, stated on record that Alexander belonged to the Hellenic world and that North Macedonians have no connection to him as they are Slavs — a different nation.\""
     }
   ],
   "evidence": [
@@ -756,6 +768,16 @@
       "date": "1600-1821",
       "notes": "Counter to claim Greek was merely trade language under Ottoman rule. Phanariots maintained Greek cultural identity for four centuries.",
       "source": "Hellenism in Byzantium: The Transformations of Greek Identity and the Reception of the Classical Tradition",
+      "claims": ""
+    },
+    {
+      "id": "E31",
+      "summary": "Prof. Dragi Gjorgiev, Director of the National Institute of History of North Macedonia, stated on record that Alexander belonged to the Hellenic world and that North Macedonians have no connection to him as they are Slavs — a different nation.",
+      "type": "Document",
+      "quote": "",
+      "date": "2026",
+      "notes": "Not a Greek scholar. The head of North Macedonia's own state history institute conceding the precise point of dispute unprompted. Pairs with Prespa Agreement as state-level concession.",
+      "source": "Interview/Statement — Prof. Dragi Gjorgiev",
       "claims": ""
     }
   ],
@@ -1171,13 +1193,23 @@
       "rebuttal": "Name the concession explicitly each round. They don't argue with evidence — they bend around it. Every new position is a concession of the last one. Deploy Prespa Agreement as final closer.",
       "frequency": "Occasional",
       "danger": "High"
+    },
+    {
+      "id": "R22",
+      "claim": "Both sides are applying modern national identities — neither Greece nor North Macedonia can claim Alexander",
+      "label": "False symmetry — both sides equal",
+      "origin": "General internet",
+      "platforms": "Facebook",
+      "rebuttal": "North Macedonia's own Director of National History stated on record they have no connection to Alexander. Their own government signed Prespa. One side has civilizational self-documentation. The other has conceded in law and in scholarship.",
+      "frequency": "Very common",
+      "danger": "High"
     }
   ],
   "images": [
     {
       "id": "I01",
       "title": "Vergina Sun Larnax",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/WTccmSXlDjKtWH4B5098iQ/-wO-RX1nmZcMZgLcbhRdJBHtV5PP1jEkbXh5gx4pBn3lPkXst9MixTXebbZxcjXgYyj_06akQRdgwBZJbEsSQ-ikoRV1N8sERnu6Ps4MCi-mTx9LxNfZCiUjIk0DvOkl3op92eDXSDRU3Zp4rUvcJ0WY7bvZ6E1755FZzuO6yGK41wamJ82sCKwXBRxfR6dF/0tqIEWWpKq0Ch8DNhfTYT6AApLeC8QSu4Nh5R5NSUsc",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/fqGRyyc2KSI8DNGJGWcoTw/7vgJToCl59w8Tz4gHJZ6Bie4nNlphYbQKhCm4wefOIlXyFqqOdE8_A9hLDggfSF8qSClJZ-gGLzQufjpcbhFWZf-9ZcwyRlIpx0NgBOwBo8KCIL8OILQ1Eecch4DzChmlXGNX_lUd0uuHG6cij7jungdOdwcGT80gqgdWOszv0ZDs-0RUCZ9km_r-5r473uW/zKY_4jOs_dyQHeBwcUh6QiAensUs07CqPwgm61IKOJQ",
       "caption": "Gold larnax (chest-shaped coffin) bearing the sixteen-rayed Vergina Sun emblem, discovered in the royal tombs at Vergina, believed to contain remains of Philip II of Macedon. Excavated by Manolis Andronikos, 1977.",
       "category": "Artifact",
       "period": "Classical",
@@ -1187,7 +1219,7 @@
     {
       "id": "I02",
       "title": "Pella Curse Tablet",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/SOcBOix5FB9wOIzDTJwKeQ/-GGv9LXM7KHsyGlpLcpVTY4Q4p5Z0Q9wOQKirchAiivWrjuVuiQvXAFMfHc9j2ojeWIuGxQBA7IZuQC-jAFTNmwVMec-mKswYmmyMjQ-4zL7L6dmBXZsMt_8FZkn8kqMKRxLAFDImDywuOvk_3x4fs7i03soc2p0NoGcH0LufC-pyPNThlRRA1mDpwdhVEZo/NcpPBAxgqQ2tykK8xhaVLuZZR8ru2bynMuvvuWRIzZ8",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/nNcA-39XuH-36v8LQ3vZBw/5iqX8arefHWxEeCIegko9x-vIy60VzAqCOZOgqhTu-UfkN8lZ8H5hlSCs5RKQd4ToaxkIlJsCcIdItixh0m2HcucDxD74uDVA2d52WEqCoh58VghmtA231mwlHzQcI1wuyKj0Px3MbmDw0y9Jp2JX1Cvp3HSSeTpxoum7bW147l2zBiMTG8anvdB63Q4fUh2/eVekE3lIlNfRs_NvcRZcmgnp0vMy8zz1-Ba8s2dWE1k",
       "caption": "Lead curse tablet discovered in Pella, ancient capital of Macedon, written in Doric Greek by a non-elite woman, c.375–350 BC.",
       "category": "Inscription",
       "period": "Classical",
@@ -1197,7 +1229,7 @@
     {
       "id": "I03",
       "title": "Linear B Clay Tablet",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/gGCkjEtsInSPuDOvK2BgGw/gq_DplQ5WdJJINbLyJ75lpNfCKzOmgh2dFebsMaYeaF0z2Uhhzaw_pROX9VKyFYhtgF8XywiOT1K2CfqHVD0RdSmy-JlPldS4Oar6-qJzctg8f6MBZ_vS21F-6XdZhNgynkKOzbUskhGo80jJ7dWSpKorhisVuMP_5qWtbGYdLyZ_u1CSfyEclpHx4IH-TEV/DvppiWyTN83lA4cnUylF-nkj63U64PiXCjxxozkgEQk",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/pMZ0yihMHKyvpjfbmarr6g/QRsJ9qZnD7prCyEXOtMLDt7Ip-kDQmPtVWNaUozUBhSxgOgL1HdHrpnkTnUQP1Aq-xhG5FhTcnLBfnTFu9dY7EBjgYqyBGqzRDOSe9WQJOQ3snJ-EY4tJGOyGpq1nJZ2fSo7ZwZ8uEja-UJcdjMra5GkQoY_g6ul1G6LyQHALxUBaEvFuGX4S1BbiY4sichM/U53v6HADsAND050FzwiR87wBz4inaWM6rDvMg3TS0e4",
       "caption": "Clay tablet inscribed in Linear B script, the earliest known form of written Greek, used by Mycenaean palace scribes c.1450–1200 BC.",
       "category": "Document",
       "period": "Bronze Age",
@@ -1207,7 +1239,7 @@
     {
       "id": "I04",
       "title": "Lefkandi Heroon Reconstruction",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/YlYnYXl2g7M7O_H-V3eDtg/fLuXKAqtXTQ-iiiaeMeI7k2K5FP_smrWOBih5BkH1b234-3jCDN4ftR3rLIFKqEC_wl0p9O4OUnrat_c_mFaXWFemRdpi-A92PkwPBqwFyu2XDknF_bmkqmOeJQ1lnmF_9edKqaaXTXPveTW_qnEevJEnWzVL1muzs5Yt9823oYS0SuOprUxeZLo2Xu2-_gC/fCSeCSpVg4sJh6s8YtcBAQeBZalcGESYnlFO6m0WG_Y",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/BDXV7ssHIKmsOJXJ7VRLNA/3IO-CWt0zothDrsJ3gh3i2b8GSEJDzcqfytpeJ1T6BIBAPDMklw3bDhyrmIGCTU9_fySmqSFLV5jQg9rPX5MBF97l3X0OY8pAtWF5jFO_Skt83t0P_kPlf8RWIj7GT4C7_KKNLrs4QYFQZ0GfoU38L1ZN-Tbkh-gatOh7vNuZqDbEaaO-hLiBPHcnli8sYwD/D6JnenbPEMy1Kb3sk74Z-OkejLeWBUZqtLwNTKfGtoM",
       "caption": "Reconstruction plan of the apsidal Heroon building at Lefkandi, Euboea, dated c.1000 BC — evidence of continued prosperity through the Greek \"Dark Ages.\"",
       "category": "Document",
       "period": "Dark Ages",
@@ -1217,7 +1249,7 @@
     {
       "id": "I05",
       "title": "Acropolis of Athens",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/nY-AT-5CIAor93tTW6HGcw/_5GvVEMqE5JbHoYnsas9dZNlCrvVkLbLt4lRlRFiwVgOh-yEsj3uIPpOGqHP0oFKadUn5xIheEN15NnTg9sWzMJ5CMMDCoTbyv45Gpq1EGk2Zbi-dxjb6jcJq7qVQ-h-0ebjOFMDrker3pSBIMXzEqfTmpxqUtL72KO8JOGj-EN6_-swuKbJOVqqXB9iSsZ_/HTWDfbADTnb7AUx_qUWl1XTUqF_g_lBpdlf1j2oU55k",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/_61FVRkS_Ok1VvZEMJmRqw/6e1LEAh0cG5Qr7UBUOhiuQoA93Djsbcs-lp0_huR-AItRCG3PqcisKpWm95CbVZycpwL5hjaS7K3Qut9LFi_vLoMpmaTOh-_HyraGkPOh4FRSYTMtT3O77P7UOUXR6MWg2m017n2UzPobK-GxF5Bowicx3areapFNTORqEaoh5sC21EE9p2m4FRf3ihYaUZC/pwROp7uggA778_Ilwj-64M6PgAtbFE26nDRhp0tMmKw",
       "caption": "The Acropolis and Parthenon, continuously sacred from the Mycenaean period (c.1600 BC) through Classical, Roman, Byzantine, and modern Greek history.",
       "category": "Site Photograph",
       "period": "Classical",
@@ -1227,7 +1259,7 @@
     {
       "id": "I06",
       "title": "Vergina Tomb II — Hunt Frieze",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/KNcCwypmai79mMV3-7BO9g/t1E7N_yomywvBvCAQHv2RaMc7cWC3gjwiLNUPFFa0NWlbKdN_EqjMXoTdhR-TmQfmknDutl1s-h-OHd88v_ky5_OaCercn9ZKqcM9GaIT-DKdVeRvDU597VECp-TI_DK5KwcWEwzeSiYbMyyvWHiho5UydqvKOpFB1pTiRLpsuCXKr5y2HLWkMAob4PuCvOu/3jQ8KnvjWqvHtI-EonlTdUdnayCq70M0nHdY8Y6yZ3A",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/rWfeKfssHQDF4sZas3LvaA/mLnMxF9xgxkgBRaxdjbYRqPyopS63z9dQgR0BQFSaAhEkv8RRmGidM476Q5kNnFR82-nSSA2mArLpILV2PHfRfFtQtA0YiGtsjMNGnLdSaVk_JNH71fSW-l9PplCjOHOLFTC_NAvgRv1JrLwn4FBTKk7lq18OofJmKs7LYHbNVtuBd2qZImPqjHgDYnjcRrz/NJC81ZyboE5OoVbk-fZs-vZpPqwbAc30x298AZFKrPY",
       "caption": "Painted frieze above the entrance of Tomb II at Vergina, depicting a hunting scene — among the only complete surviving paintings from the Hellenistic period.",
       "category": "Artifact",
       "period": "Classical",
@@ -1237,7 +1269,7 @@
     {
       "id": "I07",
       "title": "Ancient Greek Stone Inscription",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/CGQXJLpdNJNfNRdTg8kIEg/n1uGFqwcOeYOLXkAUEjqzHU6sb3DvSOfId8F4j_2kjzRDtIgbutfLJP8U7aVfdf5Jhrh2NoifF94Jcx5RSLwmQ2WUGT7S9OI4Rl7k6UQ6xImiARr5W_5FHehmn9HP1j9zQeHbcHXkpkbMN3aU_gGC53psbBIy4SMnfqHXjtcHWBbGC_wDnfA-l-QFczjBY8H/J63Wk6wkZx51i1DBCn4vROBjh0RoYE7RUsYnnsg7Nzw",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/xeJ9TO4q1VJQeLvSkZQG5Q/c2zAR99CFmWFNtxb5hUchpxtklZy2IIlQyMsWogB87ptXs1exLKwNNxNDqM5FtsbKmTanDB3i4KWE5G9rViTa2ODSkkExddUYC3JnE3nWzHBgseb648arxxrR_H1K_-2iOLqJ84yVVCpKeRcF_NFTRpRpVflB4nfkDmf14E7bhwL-ZKKdoIfXi9XJkWSRxv5/1TozIky4RZGhalPlvFxuk52tcRvqjKT6AIz4j9YXzZg",
       "caption": "Example of monumental Greek epigraphy — representative of the inscriptional record used to establish ancient Macedonia's Greek linguistic character.",
       "category": "Inscription",
       "period": "Classical",
@@ -1247,7 +1279,7 @@
     {
       "id": "I08",
       "title": "Theatre of Miletus",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/iNinZp-N1fYwNHd4M7derQ/eUQEh_cILkNyXaEofGZ7fwy-WlGRVatVdxsS9bF9c7j7f2RuTCwg5LKfJw5YS21sRK1dH9ugj6DNw9RdmCnSu--hwllpizCW-hU6OiE76AbIA-SvxmtUmfJxDjVqDdZq6P4ebEjYB4eb8Eb5XxgkEubf3qI-VdPObXhbf-KS_r6MEjkX0CBWYT0MgYq0q4JA/HcpFdwJCXgEu24zvzdQUD62nbFYC47DZwK0_REJgt5I",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/nAffOAjT3wva6hMwy9auww/n8a62FTYHQs-HQcg60UaJNLC9NUTBQAibrATkoAqvYC-8SZePVyfDwvHtsRas_3cQ16xBtdK3Vq8NFLBDElyq4M1vX5BHlDoJtsnXtfQ5oGoJEzFHU_8KpUviHunyr-kZyL77HcOnpt2WWbMRfXaBaDtPiW3pUs9L_thWWfgmqbsbUsxf-3S6OAHYkuq-z6O/NI7sEXeBgklfGBCTnPirNHzvbnyivVd09o7LWwXO-2E",
       "caption": "Ruins of the ancient Ionian Greek city of Miletus, western Anatolia — continuously Greek-inhabited from the early Iron Age migrations through the Byzantine period.",
       "category": "Site Photograph",
       "period": "Archaic",
@@ -1257,7 +1289,7 @@
     {
       "id": "I09",
       "title": "Ruins of Ephesus",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/lBzaUo4B2W2vhDWFBUG2tA/Ke2zdAl9Eve-G5oXcL0apsC59um89HmqpQumJaYdtUa50CKTHvMTbcMraKzDQbNh2lJM9b0_i8dRKdHsAjPUqpEOWgMOdIeCGQvxMQJ6SNPCJOTqT7B83Pg8wsh0v7C_XVJMd2h4Ym1_le_6uc-wr9EaY1A7KsrCOJxvCUm0YG7BHMaVEnjCZF-M06NsW8kQ/2h0z4_WmDNLJFyIHMJAJDmBl6RfkeVCecSy9w9V-QHo",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/6iLCbKCaeDL9GcbRqsxmQA/OGzPuQ84nRptQXymZMBc9KkeVcbL4nGhNfeof1E_Y-UIkPYG-inJ9LaRXpyk0kEHAW25xS39-y9d5mUfJ1tmVE7_UAd6GCRJgBJ4pBhdUMGU2AIqPxJjqR9EgtHebTLOUUJ7_m6LP9c1gNPwZ33aobtZFSq6fcplZO2-zMuZs6mv7V0PPjEbxqK9gMnU3xxL/P5vEsqF4OkmNP2eQp05WKd9bXdAJdcwvdLKtvu8yWjU",
       "caption": "One of the great Ionian Greek cities of Anatolia, founded during the Dark Age migrations, later a major Roman and Byzantine center.",
       "category": "Site Photograph",
       "period": "Archaic",
@@ -1267,7 +1299,7 @@
     {
       "id": "I10",
       "title": "Agia Sophia Interior",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/nfmaXaVAUV2wtLLDRC-whA/d9SNiiGl-Cz1z-EbInWa_lLq-bs0vQ7em_WcdfGyxHcnkrxYqoZq3-3nBR7QGiHWU7SDPgAxSRLsHlH-v-piy7PN5LcT9l069ZSdk_1N4GwNSb4IxF71ZEw3Jcz7nbBFMOClpwaioxLVYqzXrD_YsymRRtTYlUPPuWR_02J21fmoEeCRG1lRvgA775xMr_9w/ruSrq_S0aX4n1vvWeSFNc59fmBCHE9zC57y-3Fssmnc",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/FqIE8lqX0cQheKT41KbpVw/gWW47zIELusY_vyaLTnfO8TA-WZMTJSj1jziuZ8OoqjrrrEsH8-5QgSivVX3c59DGWS-opJaGZuZKl5CJAvOchx39-gau8xwup7xWPBuamX9SUxXffrlQA03V5gdWnre9Y8oT7JzH4dFzekk0E4F2e4zHUENLR07H9GHlMJqk5MOpceL6a1dVNAjYI-Ff3fl/Iqv8qjt6-_Dfu7qYHfuJ8gBHopONQUwughYhaB1254o",
       "caption": "Interior of Agia Sophia, built 537 AD as the cathedral of Byzantine Constantinople — the architectural and spiritual center of Greek Orthodox Christianity for nearly a millennium.",
       "category": "Site Photograph",
       "period": "Byzantine",
@@ -1277,7 +1309,7 @@
     {
       "id": "I11",
       "title": "Isthmian Games Site — Corinth",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/d-B7ZDMbN7bI3f4YfBRx8w/gQ92V4deXrPdGB4epLZXMq--wlqtpfrmWIS__rVI8jgOxSKPFTKeVOAzInCdGlRVOXJ9tki7xiPK4Vg9qwl8PU9LKA-NENJIjXaOEf3Jsw1L900_ME4KCJJnCMEa_I05EHFYKCbtDyr5Ccuaq9OyMHVNqmZMkyBOXe2-dWMkPovw5063cRQORdiivDK4iR61/hiSsaZeiuA0-P52s9Yan02vLUwWvVzKK4QBWAB3ibww",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/PbP8UwBDd9R28-XfKg9afw/6nN41lO3BG9cb2f89zjucTb1KNEsuPggvusp1j9LND7JIqHf3YNFyAWpAyJX1eGKSzgReV0cmlOJrkjO18GSBdDQVcv5ff8xEPFE-eBFDdvJZickLlvezkf4fYxbOVgLO9NbYI3NhbpJwPJf5uNxhuztsXNhFhJUSlfcBVk-5Z5MU5VzxC95HY-LIZAqjmF1/QLMA-gVkRckaxZAn_N-QfsmceJof4dS0iZl_Bu3cnXM",
       "caption": "The Isthmian Games site near Corinth, where Roman general Flamininus declared the freedom of the Greeks by name in 196 BC — at Greek games, in Greek language.",
       "category": "Site Photograph",
       "period": "Classical",
@@ -1287,7 +1319,7 @@
     {
       "id": "I12",
       "title": "Flamininus Coin Portrait",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/dAEo4KVpXGWK5ewqgjCrIg/lByUqDJoV2XiIx5tQ7jujsZqm2wBTZkV9Q2aHcpOf2Gb2MhlMwg0QehfiPJ3gKQ8qVgsG8WDC0DeR0DE40bz6BDk65xsLDSfEd4fqZPQCMrCDvUH74ddDbNOj7MhIqcFNlLur1wXlfyk4DLQ4byRvd4zPZRfq-h4M4tJ1jg8hco/TyJ7L81XG-lETGktjBmIi3eAxaHCAtH8KlnqFJD-30Y",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/fYWrdZeli95Ge85BUZW1ew/oj43rqaF_aaKfC6pdfHOQU8N-ItTND-kyhto6jDdoEilV_b92h9uH9mgMp8NBr6xB2LWm6FRBWsaWfcqKF3J_-8LsYR038bEfr9QK1ZbOmlDIR7PSzDajUhCLHm3l-UNWNL750XF6tCoEGb-v_Nhk2vbG1-1liN8h0PgQBA_l_M/HAdmgsrCz6BSfS1MZoclJUdr05ZJ8gUvoLSoi8rdt98",
       "caption": "Gold stater of Titus Quinctius Flamininus, c. 196 BC — the first Roman portrait coin, minted to celebrate his declaration of Greek freedom at the Isthmian Games.",
       "category": "Artifact",
       "period": "Roman",
@@ -1297,7 +1329,7 @@
     {
       "id": "I13",
       "title": "Ancient Thessaloniki Ruins",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/T7-xwCuZSDv7Us0nlwnQxg/zZzx7Jkn6HWev5gZUFPl8IJA76VMnHP6hzL9AawrJLKSeE41KsaRO2edNBMuhTEmiryyAbNWBbaTtpk7xlCS-tANwGqZMu3YS-tz0abvVnzuaJzDFhmrpSpsRpPMHoWWr8qoIx6x2io_bRQ8SOGWBsm1n-aYUACmjG72u8ztCMOiMI2LNqidh3mJczW-8IgD/OwGJie5lWnwDG_dKPAZZxUVGh2PActCAGliDCBMvOt4",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/sjYWQV7qTEmp7OgNELcrkw/j-AtZWyutY-yJ9t_dxZcaRacwh4tBCpozfV4jmIVFVHutOYePTK3LbnF6HII1I_vA-UNE6Rv-OsFrelBqfCOl_7HlO9TOxgyAUOOHvxXoBziomwFLgJ73Ub6iFBD8Rv3haAVMBbGnq3gHKe1KiYeVYHbA7nZTbf0kqs8ht5wZyZSVV-sbEoOja_sOUVwqLH4/jMv4vqO58a7MSSbQAM97XrCHTgIpgMDIWb535YlzPLI",
       "caption": "Archaeological remains of ancient Thessaloniki, founded 315 BC by Cassander and named after Thessalonike — sister of Alexander the Great. The city's name is itself a Greek primary source.",
       "category": "Site Photograph",
       "period": "Classical",
@@ -1307,7 +1339,7 @@
     {
       "id": "I14",
       "title": "Prespa Agreement — Signing Ceremony",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/SrLey32vATWrlNlmg0Ikcg/Od4IOlzOiVvssaNb3xLmva4b8Ts7nDuPvCxCGfKse--HFhXpMB8XYXxrRhXI9D6a0cTsmIk9oDP7EwC9Xx4W7xXyUh569z-LbMkNZDFMLg3FOTVeEBW-naY0Dhaq8QU7UzKb8drEOJc-z1YIYtS1_34nQ9zcaQdGKd6jXub62c6Xib3DO24bI_OkGrcTdTxT/fOXCXaDGs0u-y3yQU9oR94ZQv990QUI5ICxQvl7KvRE",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/blZ8U98ciVmtDPHeXx-LAA/3KQMyuZ6emO25g1dBlcyEOE5qcrvlJcQ7pogi-TW84L5Rg1ov4EutldWeJbVXW5ldSbTo8JQcfA8XOtgX3dsA5F_Tfifj5uOmOaaH9ER6NnIKDd5To419mq3YyVTr_Y7DD6ob2fH7bpf6ONVmscOOKk2sKMXS1eIIgQXgKmxaCfyiO400wlLS4JzCOHK8Vgr/QVzVJkgaS3YPEatxxv2xJYCIAKCvQZ2FhN2oz2c8EGw",
       "caption": "The 2018 Treaty of Prespa signing ceremony. North Macedonia formally accepted a name change acknowledging it is not the inheritor of ancient Macedon — a state-level legal concession in international law.",
       "category": "Document",
       "period": "Modern",
@@ -1317,7 +1349,7 @@
     {
       "id": "I15",
       "title": "Skopje Alexander Statue",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/Za2vZpgU1kv2dqGNRIezGg/tMK3Q5h9JnNDqrWSX_lzM_J0aBZCZtxEifuRWxrWVW0jHbtnzJZ21OhBFrwivxoBnQFJJ3KUN9E2oxfmYz5UAu9wD8rOwD3ns6Qi46Yv2R-j9IyWieHag4S8UQjnQrLQBs1944Vc4uXNBBKkfsO3ra2XB9AK0L9HYedjJpKWFwCMStTSTfz8wBPAEy3Bdaqz/gaV3_cka3Hy8ImPlJrsIMXO-TTW1SOiUcgD_ZBsqmpw",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/5qYSyUHZf1JKAzFB3XOZrg/ObUeKfnx3gsXQBEtb2lAlsvQxI25rYwFm-ksZFG8ODLZ0Yl0lDytR9zGHn8o3xDSO5RUJIoSyGaDCdCqqYOeziNI4uo9Smb2RVAyXxIkHBjIFmB5ZkzqE9ZBt91UBpBPuL0biizNu5Cse2vM0GR_MNf1Ln67s98YkLdLPrxfrO2uircTtX3K9s0VYkbX0Wyv/15kYpTyoaFgrTh--Nj12CDbQAH97k2CSZiz8mTieMpo",
       "caption": "The Alexander the Great statue in Skopje, built 2011 as part of the Skopje 2014 project. Seven years later, the North Macedonian government signed the Prespa Agreement conceding the ancient Macedonian claim in international law.",
       "category": "Site Photograph",
       "period": "Modern",
@@ -1327,7 +1359,7 @@
     {
       "id": "I16",
       "title": "Alexander Letter to the Chians — Stele",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/9jLpBmcYsaU3Ni6t0WZJpw/eCrNvjtANipeojycLWvWt_shqh7-rWIjS8itkirm_3q2BN_NwNzeYaM9IWRO3jzPAh6Z1Rs68F0R4yXztUs98BYVVvkxMUTht3O20ZbkEaoqCLa_iEtn8FWTw_bxDm5mSh23mZA-mK5DJopjXZ5b20rLnFv-fjhfmzYREE0qWigQW7MkW3qqVwFIWABQm4EB/P2VqUVFVHwE69GLsOk-FaS3OLZEzHkXDTwNcvrZBXLs",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/RKFxaCIEqi2ad7HaQ_jbQQ/bQlb7t7O-tNplRhjYnL4js2BMgjh1v0GeYKcd3RQ-y6pM3Mxv8XUhYpliDJ2wiA0KcUnCoda5ndRAi5ccsz7hh4hqlCKwP1rbdxG9Xo7PMFuREVUzOlXUggJUHq3EhBBQKQzKLnsVCfg3gwYQdXsGPyseIB0SE0TLhZto9Pm8tv3amwCRma-jJBKrG-7zZcq/zO4aYJoPiFkOW5BODvae4dQe2hXWgDYL1s7ZbyBOhNs",
       "caption": "Stone stele inscribed with Alexander the Great's letter to the Chians, 332 BC. Written in Greek. A physical primary source — carved in stone, not a literary tradition or later copy.",
       "category": "Inscription",
       "period": "Classical",
@@ -1337,7 +1369,7 @@
     {
       "id": "I17",
       "title": "New Testament Manuscript — Koine Greek",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/ZwSd1Juiu90aAHtyeGrMSA/O5v4oyLNX9eyWBqEUZEwWjtPHvsjAOcTCiHiFSZPGia76dycIHPd9jSy82xcLZGY7vvKLIitXNriRaduSeFXT0jGjji8ECYeS3qxpatw9bAJXBsmS2Z9C1J_KC4sR_T3WnssHL3qKZ3Mo-5TExxlTwUAjd_Y8lfexCVl0Dm79UCDMwB9XjbQ3jIOSSFyD0eF/6h6oHQq3UcOXwNOoSoIU5bgThP9hoTR1y7h8AW0VQ8M",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/XAkW6renuc0c9_AY96MRHQ/XfQZYYB-WOpviyDJ8BkQEX5ncTnfUEOcaALXnUQN1zJgyKmqq66_T96kNPExrxeHbvJCdVt2OEWED3zuv5vOw2DINWsZ2Pc44rDQjCSTOoGrTHH0PG3_2YZICZVRpj6oBjPvNbNFx7ME5QSInBGDewFDZW7tdFbhCw6GRPEz8uP0rzKsB5aDIn2qy3ZgNtIQ/Lv_hX_9wqwDruMIVNwzh6ZCLSI1z5ekZXHTud6QEQP0",
       "caption": "Page from the Codex Sinaiticus, 4th century AD — the New Testament written in Koine Greek. The Greek Orthodox Church has conducted liturgy in Koine continuously since this period, 1,500 years before claims that Koine was invented or stolen in 1832.",
       "category": "Document",
       "period": "Byzantine",
@@ -1347,7 +1379,7 @@
     {
       "id": "I18",
       "title": "Bulgarian Exarchate Declaration 1870",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/Ne5WpZKBIYMgPqOUqCNkKg/hNNirS4HzdiuPHazLwQU3iSbbZQh0WpjmJfhIojtNI9u9vBYbhV28t-I3FJ_4N6DkHXzJmQgYkxWVxMNsIAv8J7ieo_xTkRmcop8C3Z5h5wS5WzqlBdhMMI0YSp7qLnd_8q0o6W-nAMgG2ubD_cWZV2kQ8rm1AIFBiwg9sCCAYzIEqIqMMv546aKH5_tjooU_hu8pvW1xTBEop9_LUE18A/uK5WlXO2aFtPfrtngq1oYQjMJP81DEZWhVn2VhZAtzg",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/DxR_Xkr8-PhD10CopbErww/avJ4VtOPPNZgxT6bfOHLp9nqic-Jm2w9iR2ohKE1t51OrMohNpB3oTu3vNXKbsXl-ykK6PNOxJYiAmutJdrD3o210CIlVTEx59Aeu1enx7aZVJFJKKiIF0qy3PsM_kWmResLx84VyvOAcgOLvql322yBp3QeVYHVZPlJx1NbIVHCR1nw1xsS20jwUKYTXgsZEZgIUuwMxkhJGO4uWWXhcQ/casbqpZJTcX2qM0nKB1wrLJDwHE-4cDHBX3uB4dUF1Q",
       "caption": "The 1870 declaration establishing the Bulgarian Exarchate — created specifically to escape Greek ecclesiastical dominance of the Ecumenical Patriarchate. Proves the Patriarchate was Greek in character.",
       "category": "Document",
       "period": "Modern",
@@ -1357,7 +1389,7 @@
     {
       "id": "I19",
       "title": "Phanar District Constantinople",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/fesAanRgPnrh5ayw5Yk5MQ/z7BASMEQQI0nss5UtfvYaPnKAQAnb3hQNUGfWBCTi0l16BxnHbNoMzHQQZBFuRq0xiRqciqLbtl9rDrzP88lc9llBXq9n5ookq10cLwP8BqOKkjqVMxdX5oRUlpjntSNCZaB3cF-YdiDPu22cfs_0gVY0UtmhrjARa4sXKPHWOzWpWK5qHZQ31cmq2aAfpVR/yGNXsz01X_HvlxQXxinOz6sKq60GpZdGoc0Q4Ngxc7w",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/W73FsZqNirjjnI-vEo6Cpw/BYrgYoAZRR1_J-BMb3SsS0NuEYwq8Hy1zTgZoYSBoviLkmrLYn6dWEqrsm4_n94-2BE0lZTjqobA9Pn4NTKE4u_z7vDmTZpSPZ2xqvHC1zptWmgktAM4hfK1y2uwDaCmBvmqyrsNmfAP8e3Mef-knlTRfL9RPKwZ91EnGn_hpBLkvJhtdFCoH3c_raPpRbZl/ZkKoSJg79iUYCdkTTImjz8mrzQBEYM7Ysi2ncbJrNJU",
       "caption": "The Phanar district of Constantinople — home of the Phanariot Greek elite who maintained Greek language, culture, education and publishing throughout four centuries of Ottoman rule.",
       "category": "Site Photograph",
       "period": "Byzantine",
@@ -1367,7 +1399,7 @@
     {
       "id": "I20",
       "title": "George Gemistos Plethon — Manuscript",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/K7fMPSuXhOZHYV7LXK_Eqw/jI2Ksx9lEB8MUhLA5kTDdtIg9RwZAHSpF_YPxmovgubTyxGa8uSz_ta2xntl314Qo9XgQEpnllhZGTIFJEZN8CCJv1y2VIxUaZ-OZ5NCPgd3aXa1t3_hC_DQpMPsa0L-ZAUbRKiF0d8H4AIyG9kZgTpwMmf8N6SNzkmvoLVclMmiJTjGNeQWxJviVPXn_8mg/6c3IDaaQYQ-KmVjMpGTBHSkbUXfEZ7QI_Zm8uYuoATc",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/s7oilkgzrhcWlvAH-PhGVw/8DWcASv0MSZqYYLaHs27JoMuHs9sYmOirl1fMazJqdtjQteFTJcAzAabYgxxnvtOtYV75VKiLYPXSBju99f7FN6jZ5V6IqENLYlB1Tb_8i2pCCTinp6EnrINH3wyuENYwzBBXBQ45VNRqkeBAPfBrBShUuksaE3W0DYumwqfbZNnc5KOYKPirHQFpVB-H1jR/4ONrtVhv2nmtVdfZxsN43Qx8PbRolqEXwMi8iJGaiO0",
       "caption": "Works of George Gemistos Plethon — 15th century Byzantine philosopher who proposed renaming the Byzantine state Hellas. His books were burned by Patriarch Gennadios Scholarios, proving Hellenic identity was a living, threatening intellectual reality in late Byzantium.",
       "category": "Document",
       "period": "Byzantine",
@@ -1377,7 +1409,7 @@
     {
       "id": "I21",
       "title": "Arrian Anabasis Manuscript",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/JLbvbDm_dW3Z5ELEDm3_YA/CpnXBWtNClLLhozzqmzt4ddAEvg3OXvVsPSOnz26TSQlocDPO9D2O7auwz8OfS0TqTeLA0oCV951pPUbgJET2KkqnTipFr-yN88uAtGCCiTgSHwf1UL3I7RQBJ0RakoliP3jslMnGb0CzHSE_L506DvSqpKXl7A0jkeUdWp5x-x6zATwfyffCD5LSiRiiRBj/9JDRkW5WrKEY99Qct3uwSDqgvsF-jpvDOJgRsgtdNXA",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/8deSpzPWCNKXpGEZYamYig/57HITLQ1kJdD5w2tokmWCw7JyAqBFHeRS77WZq1wBsCe0sSJ05TA5Elvsp_mH9l4JFet2xP2MeVFN_3JTX62NK98oC4uw3_BKo70m4_fpVjmBFgWVv0-a2xYS6XTNEOFEFmxWlvuL7jHUB4gRFOtwFbA69wFnYHYf3OVjo9dXX9slHIUVxoyuTBZN3DD25xy/v68ECM85CaQmgJ4mo0LuaIiR3IQlnjqQImNTMhJirAA",
       "caption": "Manuscript of Arrian's Anabasis of Alexander — the most authoritative ancient account of Alexander's campaigns, written in Greek, recording Alexander's speeches, letters, and identity as leader of the Hellenes.",
       "category": "Document",
       "period": "Classical",
@@ -1387,7 +1419,7 @@
     {
       "id": "I22",
       "title": "Amerias of Alexandria — Glossai Reference",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/zHOf6hohCRSnyeYzEBxGhw/4iZU-2j3CCBmnJImq1Ew_0X9hsK9FYLMakkzGywSh9WDPFknL5MbHmijqhvmHkEPJx_yetjT7zUMyL_Rd_iX3L25VKtW6LZqO3mAL5pCsoVhSwp7tVpQZYiQSHaGnBWW_4sJeH6bpUE4di7-8IBfSGt8SqvvUcJybLAyH1W_FTEoJnhzEWFf5jbwmpy10t70_5H4ViS7GDzDWPhU_sq2mQ/eYhcKToy-ZRSgBtTnrlfX_x0iW3lqQWw3hXRbk_qCak",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/6FSyfphzMl7YyogV3yxdnw/fejV94urWsLM2bhqQLpDyZrHfdP_Is4rsrFLl07JBhv-oz9_8kPJiymCHmHzI25HXgy3dPzDQH236wzq0Qzip0A8G1FC5vlqX0Gxlgw4NR4HSpg9WNi5iXtT8PAFLChdTEmNMB3_wH_oRv5kyp_RO4mhNlfEjtuZjlQlpkeryVOdCmtYugBpBM57dvDu2Bq3dgq8Hmkt2bSf49BoJhhWSQ/AAzwCEwHUOAcATVldSL_z1FIK9nI8a5WpSCJ9b18ku8",
       "caption": "Reference to Amerias of Alexandria, 3rd century BC Macedonian lexicographer whose glossary was written in Greek and included Homeric vocabulary — evidence that Greek was the language of Macedonian intellectual life.",
       "category": "Document",
       "period": "Classical",
@@ -1397,12 +1429,22 @@
     {
       "id": "I23",
       "title": "Avato Village — Thrace, Greece",
-      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782360000000/qRRS8U1mwyZhQsFWPVDWnw/oELooPdyaRxeeoXsUva-ZOL9_LxVxatpLFfouly5gF2TH1pS-ar0ZEqFPqv8AcMmzeRMt5VfCmKTkOV9EaDswcm2rvgHa2SeXI47rCGl-2NBOK6sLg1liQrYdIvNeKLFU7knoX0BT2E9YFU1QDhPdysMSV73qjLx4JC4A4YGtfSlU0DDFT5EYybJjikltzZZV8pTVwwneYe48Jvx0P3tsg/TMBceS9PtPaK_KElHoL9PLZG_3ZqAWMZYlOBciVVrME",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/FDM-cESnZvLka4BQbGDa5w/bHGxctS5IdLJrgM2vj_Z6C77fKRVDMGdTGlpSMT_UNMg05jWFjDXAiT8RFSX0wAvIZMFYkTtbM2J10qp4-sQNVRvlEqb3txqNxExKtvv_gbCTSl4M7Ir7qDCjIMCE9zG-UFoAYq7EBxIKGI6O4ErBgxa9ONmahBAZCuOgoBDUdGdV0qDOcIg_U9eDeapZlLK3SH2DmsQ1j0ff1WSIfP1VQ/acM-xBelv_Qcfgsi5HYpf-T6OsjdfyWKk1Q42U0-3TE",
       "caption": "The village of Avato in Thrace — home to descendants of Africans brought to the region during Ottoman rule who identify as Greek. Evidence that Greek identity is civilizational not racial.",
       "category": "Site Photograph",
       "period": "Modern",
       "related_claim": "\"Greek has been continuously transmitted as a living spoken language for over 3,400 years, without the total rupture in native transmission experienced by Latin or the multi-century revival gap experienced by Hebrew — making the grammatical evolution from Ancient to Modern Greek a case of continuous change within one living language, not language death and replacement.\"",
       "related_evidence": "\"Hellenic self-identification persisted within the Byzantine Empire alongside the dominant official \"\"Roman\"\" (Rhomaios) identity, and became the explicitly preferred self-description among many intellectuals by the empire's final two centuries.\""
+    },
+    {
+      "id": "I24",
+      "title": "Prof. Dragi Gjorgiev — Quote Card",
+      "url": "https://v5.airtableusercontent.com/v3/u/54/54/1782374400000/JBsitulilukx7I4k70wA_Q/Xtqa1ytdqDQcNQYT_3TPPJxRx07nuSIuOAv_dJAd44TlsHDT23VYVjtEiL3_gSLJrAutRp_VXPv3r4B56cVRWQyJ8fmQ2MvxcaNxYHd9uS3umikmykyvEgBATx6i5hkW02fp35Kww4TX-NNElumRSRegIGygOxZhxLQJ1cEYHuJ5Dk7tc7r2JvDNg9r8AaQ7/cHKBvaBbwjQGZyQglwZwP3QWiQjeA6QHOWB_58EL1rk",
+      "caption": "Director, National Institute of History of North Macedonia",
+      "category": "Site Photograph",
+      "period": "Modern",
+      "related_claim": "\"The both-sides argument — that neither Greece nor North Macedonia can claim Alexander — is false symmetry. The Greek claim rests on civilizational self-documentation in Alexander's own time. The North Macedonian claim rests on a Slavic population arriving 1,000 years later.\"",
+      "related_evidence": "The 2018 Treaty of Prespa — signed by the government of North Macedonia — formally accepted a name change acknowledging they are not inheritors of ancient Macedon. State-level legal concession on the precise point of historical dispute."
     }
   ]
 }
