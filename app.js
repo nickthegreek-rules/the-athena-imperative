@@ -43,7 +43,6 @@
   function runSearch(q) {
     if (!q) { showIntro(); return; }
 
-    header.classList.add('compact');
     introHint.style.display = 'none';
     noResults.style.display = 'none';
 
@@ -61,7 +60,6 @@
   }
 
   function showIntro() {
-    header.classList.remove('compact');
     introHint.style.display = 'block';
     noResults.style.display = 'none';
     resultsEl.innerHTML = '';
