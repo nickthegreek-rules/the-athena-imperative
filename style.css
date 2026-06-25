@@ -50,13 +50,13 @@ body {
 
 /* ── Header / Hero ───────────────────────────────────────── */
 #header {
-  padding: 8vh 1.5rem 2rem;
+  padding: 6vh 1.5rem 2rem;
   text-align: center;
-  transition: padding var(--transition);
+  transition: padding 150ms ease;
 }
 
 #header.compact {
-  padding: 2.5rem 1.5rem 1.25rem;
+  padding: 4vh 1.5rem 1.25rem;
 }
 
 .wordmark {
